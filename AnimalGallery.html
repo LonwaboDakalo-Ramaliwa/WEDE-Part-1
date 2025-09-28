@@ -1,75 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Gallery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Gallery</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/LightBox.css"> 
 </head>
-    
-<body bgcolor="#C9C9C9">
-  <a name="top"></a>
-  <h1 align="center">
-  <img src="Images/logo update.png" width = "33%" height = "350px" align = "center"><br>
-  Gallery</h1>
-</br>
-<marquee style="font-size: 25px;">Do your part and have a heart.</marquee>
-</br>
-<nav>
-<table border="2" width="100%">
-<tr align="center">
-<td bgcolor="#C4FEFF">
-&nbsp;
-<a href="home.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Home</font></a>
-</td>
-<td bgcolor="#C4FEFF">
-<a href="AnimalInfo.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Info</font></a>
-</td>
-<td bgcolor="#C4FEFF">
-&nbsp;
-	<a href="AnimalShelter.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Shelters</font></a>
-</td>
-<td bgcolor="#C4FEFF">
-&nbsp;
-	<a href="AnimalProducts.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Products</font></a>
-</td>
-<td bgcolor="#C4FEFF">
-&nbsp;
-	<a href="ContactUs.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Contact Us</font></a>
-</td>
-</tr>
-</table>
-</nav>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
+  <header>
+    <img src="Images/logo update.png" alt="No One Left Behind Logo">
+    <h1>Gallery</h1>
+  </header>
 
- <div>
-    <h2> Dog Gallery</h2> <!-- Displays only pictures with dogs-->
-    <img src="Images/dog1.png" alt="Dog 1" height="300px">
-    <img src="Images/dog2.png" alt="Dog 2" height="300px">
-    <img src="Images/dog3.png" alt="Dog 3" height="300px">
-    <img src="Images/dog4.png" alt="Dog 4" height="300px">
-    <img src="Images/dog6.jpg" alt="Dog 6" height="300px">
+  <div class="banner">Do your part and have a heart.</div>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="AnimalInfo.html">Animal Info</a>
+    <a href="AnimalShelter.html">Animal Shelters</a>
+    <a href="AnimalProducts.html">Animal Products</a>
+    <a href="AnimalGallery.html">Gallery</a>
+    <a href="ContactUs.html">Contact Us</a>
+    <a href="DonateVolunteer.html">Donate & Volunteer</a>
+  </nav>
+
+  <main id="main">
+    <!-- DOG GALLERY -->
+    <h2>Dog Gallery</h2>
+    <div class="gallery" id="dog-gallery">
+      <div class="picture"><img src="Images/dog1.png" alt="Dog 1" data-src="Images/dog1.png" data-caption="Dog 1"></div>
+      <div class="picture"><img src="Images/dog2.png" alt="Dog 2" data-src="Images/dog2.png" data-caption="Dog 2"></div>
+      <div class="picture"><img src="Images/dog3.png" alt="Dog 3" data-src="Images/dog3.png" data-caption="Dog 3"></div>
+      <div class="picture"><img src="Images/dog4.png" alt="Dog 4" data-src="Images/dog4.png" data-caption="Dog 4"></div>
+      <div class="picture"><img src="Images/dog6.jpg" alt="Dog 6" data-src="Images/dog6.jpg" data-caption="Dog 6"></div>
+    </div>
+
+    <!-- CAT GALLERY -->
+    <h2>Cat Gallery</h2>
+    <div class="gallery" id="cat-gallery">
+      <div class="picture"><img src="Images/cat.jpg" alt="Cat 1" data-src="Images/cat.jpg" data-caption="Cat 1"></div>
+      <div class="picture"><img src="Images/cat2.jpg" alt="Cat 2" data-src="Images/cat2.jpg" data-caption="Cat 2"></div>
+      <div class="picture"><img src="Images/cat3.jpg" alt="Cat 3" data-src="Images/cat3.jpg" data-caption="Cat 3"></div>
+      <div class="picture"><img src="Images/cat4.jpg" alt="Cat 4" data-src="Images/cat4.jpg" data-caption="Cat 4"></div>
+    </div>
+
+    <!-- PET GALLERY -->
+    <h2>Pet Gallery</h2>
+    <div class="gallery" id="pet-gallery">
+      <div class="picture"><img src="Images/pets.jpg" alt="Pets 1" data-src="Images/pets.jpg" data-caption="Pets 1"></div>
+      <div class="picture"><img src="Images/pets2.jpg" alt="Pets 2" data-src="Images/pets2.jpg" data-caption="Pets 2"></div>
+      <div class="picture"><img src="Images/pets3.jpg" alt="Pets 3" data-src="Images/pets3.jpg" data-caption="Pets 3"></div>
+      <div class="picture"><img src="Images/dog5.jpg" alt="Dog 5" data-src="Images/dog5.jpg" data-caption="Dog 5"></div>
+    </div>
+  </main>
+
+  <!-- DOG LIGHTBOX -->
+  <div id="dog-lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <a class="prev-arrow">&#10094;</a>
+    <a class="next-arrow">&#10095;</a>
+    <div class="lightbox-content-container">
+      <img class="lightbox-image" id="dog-lightbox-img">
+      <p id="dog-caption"></p>
+    </div>
   </div>
 
-  
-  <div>
-    <h2>Cat Gallery</h2><!-- Only displays pictures with cats-->
-    <img src="Images/cat.jpg" alt="Cat 1" height="300px">
-    <img src="Images/cat2.jpg" alt="Cat 2" height="300px"> 
-    <img src="Images/cat3.jpg" alt="Cat 3" height="300px"> 
-    <img src="Images/cat4.jpg" alt="Cat 4" height="300px">
+  <!-- CAT LIGHTBOX -->
+  <div id="cat-lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <a class="prev-arrow">&#10094;</a>
+    <a class="next-arrow">&#10095;</a>
+    <div class="lightbox-content-container">
+      <img class="lightbox-image" id="cat-lightbox-img">
+      <p id="cat-caption"></p>
+    </div>
   </div>
 
-  <div>
-    <h2>Pet Gallery</h2><!-- Only displays pictures with pets-->
-    <img src="Images/pets.jpg" alt="Pets" height="300px">
-    <img src="Images/pets2.jpg" alt="Pets 2" height="300px">
-    <img src="Images/pets3.jpg" alt="Pets 3" height="300px">
-    <img src="Images/dog5.jpg" alt="Dog 5" height="300px">
+  <!-- PET LIGHTBOX -->
+  <div id="pet-lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <a class="prev-arrow">&#10094;</a>
+    <a class="next-arrow">&#10095;</a>
+    <div class="lightbox-content-container">
+      <img class="lightbox-image" id="pet-lightbox-img">
+      <p id="pet-caption"></p>
+    </div>
   </div>
 
+  <footer>
+    <a href="#top">Back to top</a>
+  </footer>
 
-
+  <script src="lightbox.js"></script>
 </body>
-<a href='#top' style="font-size: 25px;">Back to top</a>
-  
 </html>
