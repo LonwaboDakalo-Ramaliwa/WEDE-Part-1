@@ -1,129 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Info</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Information</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .animal-info {
+      margin: 2rem auto;
+      max-width: 1000px;
+      line-height: 1.6;
+    }
+    .info-block {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .info-block h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .info-block img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    ul.quick-facts {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+    /* FAQ Styles */
+    .faq-section {
+      margin-top: 3rem;
+    }
+    .faq-category {
+      margin-bottom: 2rem;
+    }
+    .faq-category h3 {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    details {
+      margin-bottom: 0.8rem;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+    }
+    details[open] {
+      background: #f0f8ff;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body bgcolor="#C9C9C9">
-  <a name="top"></a>
-  <h1 align="center">
-  <img src="Images/logo update.png" width = "33%" height = "350px" align = "center"><br><!--NPO Logo-->
-  Animal Info</h1> <!-- Page Name-->
-</br>
-<marquee style="font-size: 25px;">Do your part and have a heart.</marquee> <!--Scrollable Text--><!--Slogan-->
-</br>
-<nav>
-<table border="0" width="100%">
-<tr align="center">
-<td>
-<a href="home.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Home</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="AnimalShelter.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Shelters</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="AnimalProducts.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Products</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="AnimalGallery.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Gallery</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="ContactUs.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Contact Us</font></a>
-</td>
-</tr>
-</table>
-</nav>
-  <h1>Frequently Asked Questions (FAQs)</h1>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <div>
-    <h2>General Questions</h2>
+  <header>
+    <img src="Images/logo update.png" alt="No One Left Behind Logo">
+    <h1>Animal Information</h1>
+  </header>
 
-    <details>
-      <summary style="font-size: 25px;">Does this organisation have a physical facility?</summary>
-      <p style="font-size: 20px;">Yes this orgainisation does have a physical facility which can be found in the Animal Shelters Page.</br><a href="AnimalShelter.html">Click Here to view facilities</a></p>
-    </details>
+  <div class="banner">Do your part and have a heart.</div>
 
-    <details>
-      <summary style="font-size: 25px;">Do you offer customer support?</summary>
-      <p style="font-size: 20px;">Yes, we offer 24/7 customer support via chat, email, and phone.</p>
-    </details>
-    
-    <details>
-      <summary style="font-size: 25px;">Do you assit with emergencies?</summary>
-      <p style="font-size: 20px;">Yes, we offer emergency aid to animals in need of rescue or treatment. A charge may be applicable if you are 50 kms away from one of our nearest facilities to you.</p>
-    </details>
-    <details>
-      <summary style="font-size: 25px;">How do I volunteer?</summary>
-      <p style="font-size: 20px;">We are open to walk-ins but you can also head to our contact us page and fill out the form there and we will progress from there.
-        	<a href="ContactUs.html" target="_blank" style="font-size: 20px;">Contact Us</a>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="AnimalInfo.html" aria-current="page">Animal Info</a>
+    <a href="AnimalShelter.html">Animal Shelters</a>
+    <a href="AnimalProducts.html">Animal Products</a>
+    <a href="AnimalGallery.html">Gallery</a>
+    <a href="ContactUs.html">Contact Us</a>
+    <a href="Donate&Volunteer.html">Donate & Volunteer</a>
+  </nav>
+
+  <main id="main" class="animal-info">
+
+    <!-- Dogs -->
+    <section class="info-block">
+      <h2>Dogs</h2>
+      <img src="Images/dog1.png" alt="Golden retriever dog">
+      <p>
+        Dogs are known for their loyalty, companionship, and playful nature. 
+        They thrive on regular exercise, proper training, and social interaction. 
       </p>
-    </details>
-  </div>
+      <h3>Quick Facts</h3>
+      <ul class="quick-facts">
+        <li>Average lifespan: 10–15 years</li>
+        <li>Diet: Balanced dog food (kibble, wet food, or raw diet if supervised)</li>
+        <li>Exercise: Daily walks and playtime</li>
+        <li>Temperament: Loyal, social, and affectionate</li>
+      </ul>
+    </section>
 
-  <div>
-    <h2>Pet Related Questions</h2>
-
-    <details>
-      <summary style="font-size: 25px;">Why does my puppy / young dog keep biting me?</summary>
-      <p style="font-size: 20px;">Your dog is currently teething which is a normal phase every dog goes through to get used to using their teeth properly. if it is over a year old it could be behavourial problems and we suggest monitoring its behevaoiur just to see 
-        if the biting is acting out or if it is still in its teething phase.</br> <a href="https://vcahospitals.com/know-your-pet/teeth-teething-and-chewing-in-puppies"> A guide on teething.</a>
+    <!-- Cats -->
+    <section class="info-block">
+      <h2>Cats</h2>
+      <img src="Images/cat.jpg" alt="Tabby cat lying down">
+      <p>
+        Cats are independent animals who can also be very affectionate. 
+        They enjoy exploring, playing, and finding cozy places to nap. 
       </p>
-    </details>
+      <h3>Quick Facts</h3>
+      <ul class="quick-facts">
+        <li>Average lifespan: 12–18 years</li>
+        <li>Diet: High-protein cat food (wet or dry)</li>
+        <li>Exercise: Indoor play or safe outdoor exploration</li>
+        <li>Temperament: Independent, curious, and loving</li>
+      </ul>
+    </section>
 
-    <details>
-      <summary style="font-size: 25px;">What foods are harmful to dogs?</summary>
-      <p style="font-size: 20px;"><ul style="font-size: 20px;">
-          <li>Grapes </li>
-          <li>Chocolate</li>
-          <li>Avocado</li>
-           <li>Chives</li>
-          <li>Yeast Dough</li>
-          <li>Caffeine</li> 
-          <li>Onions</li>
-          <li>Garlic</li>
-          <li>Alcohol</li>
-          <li>Mushrooms</li>
-          <li>Eggs</li>
-          <li>Nuts</li>
-          </ul></p>
-       <p style="font-size: 20px;"> We recommend taking your pet/s to a vetinarian to check what other food products can increase health issues in your pet/s.</p>
-    </details>
-    
-    <details>
-      <summary style="font-size: 25px;">How long can I leave my dog alone</summary>
-      <p style="font-size: 20px;">Depends on the breed because so dogs do not mind the isolation but it is a limited amount so the recommended max is 4 hours and that is only if it is trained and is a 1.5 year old and higher. It can not be left alone for this time period as a puppy it will cause behavourial issues.</p>
-    </details>
+    <!-- Other Pets -->
+    <section class="info-block">
+      <h2>Other Pets</h2>
+      <img src="Images/pets.jpg" alt="Small pets including rabbits and guinea pigs">
+      <p>
+        Small pets such as rabbits, guinea pigs, and hamsters are gentle companions, 
+        especially for families seeking lower-maintenance animals. 
+      </p>
+      <h3>Quick Facts</h3>
+      <ul class="quick-facts">
+        <li>Average lifespan: 2–10 years (depending on species)</li>
+        <li>Diet: Fresh vegetables, pellets, hay, or species-specific food</li>
+        <li>Exercise: Playtime in secure enclosures</li>
+        <li>Temperament: Gentle, calm, and best with patient handling</li>
+      </ul>
+    </section>
 
-    <details>
-      <summary style="font-size: 25px;">What's the best pet for a first-time owner?</summary>
-      <p style="font-size: 20px;">Firstly consider your availability with how much free time you have for leisure and have energy to still do activities and your lifetsyle but cats, small dog breeds, hamsters and fish are a good choice for first-time owners.</p>
-    </details>
+    <!-- FAQs -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
 
-    <details>
-      <summary style="font-size: 25px;">How often should I feed my cat?</summary>
-      <p style="font-size: 20px;"> 2 times a day if it is an adult but 3 - 4 times if it is still a kitten because it requires a lot of nutrients to develop and grow.</p>
-    </details>
-  </div>
-  <details>
-      <summary style="font-size: 25px;">Where can I find pet tips?</summary>
-      <p style="font-size: 20px;"> We have a wide selection of websites that have helpful pet tips.</p>
-      <ul style="font-size: 20px;">
-          <li><a href="https://www.aspca.org/pet-care"> ASCPA Pet Care</a> </li>
-          <li><a href="https://www.rspca.org.uk/adviceandwelfare/pets"> RSPCA Pets</a> </li>
-          <li><a href="https://www.petmd.com/dog/general-health/pet-care-tasks-easily-overlooked-by-pet-parents"> 7 Pet Care Tips Easily Overlooked by Pet Parents </a> </li>
-          <li><a href="https://www.four-paws.org.za/our-stories/publications-guides/pet-care-tips"> Pet Care Tips </a> </li>
-          </ul>
-    </details>
+      <!-- General Questions -->
+      <div class="faq-category">
+        <h3>General Animal Questions</h3>
+        <details>
+          <summary>How do I know which pet is right for me?</summary>
+          <p>Consider your lifestyle, living space, time commitment, and budget. Dogs often need more time and exercise, while cats and small pets can adapt better to limited spaces.</p>
+        </details>
+        <details>
+          <summary>Are shelter animals healthy?</summary>
+          <p>Yes, animals from our shelter are checked by veterinarians, vaccinated, and treated before adoption.</p>
+        </details>
+      </div>
 
+      <!-- Specific Care Questions -->
+      <div class="faq-category">
+        <h3>Specific Animal Questions</h3>
+        <details>
+          <summary>How often should I walk my dog?</summary>
+          <p>Most dogs need at least two walks per day, plus playtime to keep them mentally and physically stimulated.</p>
+        </details>
+        <details>
+          <summary>Should I keep my cat indoors?</summary>
+          <p>Indoor cats tend to live longer and healthier lives. If allowed outside, it’s best to supervise or provide a secure outdoor enclosure.</p>
+        </details>
+        <details>
+          <summary>What do rabbits need in their diet?</summary>
+          <p>Rabbits need unlimited hay, fresh vegetables, and small amounts of pellets. Fresh water should always be available.</p>
+        </details>
+      </div>
 
+      <!-- Donations & Volunteering -->
+      <div class="faq-category">
+        <h3>Donations and Volunteering</h3>
+        <details>
+          <summary>How can I donate?</summary>
+          <p>You can donate money, supplies, or food. Visit our <a href="DonateVolunteer.html">Donations & Volunteering page</a> for details.</p>
+        </details>
+        <details>
+          <summary>Can I volunteer at the shelter?</summary>
+          <p>Yes! We welcome volunteers for walking dogs, socializing cats, cleaning, and helping with events. Sign up on our volunteer page.</p>
+        </details>
+        <details>
+          <summary>Are donations tax-deductible?</summary>
+          <p>Yes, as a registered non-profit, your donations are tax-deductible. We provide receipts for all contributions.</p>
+        </details>
+      </div>
+    </section>
+  </main>
 
-
+  <footer>
+    <a href="#top">Back to top</a>
+  </footer>
 </body>
-<a href='#top' style="font-size: 25px;">Back to top</a> <!--Transports you back to the top of the page-->
-  
 </html>
