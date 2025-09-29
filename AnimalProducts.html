@@ -1,106 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Products</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Products</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/AnimalProducts">
+  <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+		integrity=
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+	  <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+		integrity=
+    "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+	<!-- for styling -->
+	<style>
+		table {
+      width: 50%;
+			border: 1px solid black;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		input[type="button"] {
+			width: 100%;
+			padding: 20px 40px;
+			background-color: green;
+			color: white;
+			font-size: 24px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+		}
+
+		input[type="text"] {
+			padding: 20px 30px;
+			font-size: 24px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+			border: 2px solid black;
+		}
+	</style>
 </head>
-<body bgcolor="#C9C9C9">
-  <a name="top"></a>
-<h1 align="center">
-  <img src="Images/logo update.png" width = "33%" height = "350px" align = "center"><br>
-  Animal Products</h1>
-</br>
-<marquee style="font-size: 25px;">Do your part and have a heart.</marquee>
-</br>
-<nav>
-<table border="0" width="100%">
-<tr align="center">
-<td>
-&nbsp;
-<a href="home.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Home</font></a>
-</td>
-<td>
-<a href="AnimalInfo.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Info</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="AnimalShelter.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Animal Shelters</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="AnimalGallery.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Gallery</font></a>
-</td>
-<td>
-&nbsp;
-	<a href="ContactUs.html" target="_blank" style="font-size: 25px;"><Font color="#541675">Contact Us</font></a>
-</td>
-</tr>
-</table>
-</nav>
+<body>
 
+  <header>
+    <img src="Images/logo update.png" alt="No One Left Behind Logo">
+    <h1>Animal Products</h1>
+  </header>
 
-<h1 align="center"> Pet Food</h1>
+  <div class="banner">Do your part and have a heart.</div>
 
-<table border="2" width="100%">
-<tr align = "center">
-<th><h2>Products</h2></th>
-<th><h2>Product Name</h2></th>
-<th><h2>Supplier</h2></th>
-</tr>
-<tr><!-- Displays Product Pictures-->
-  <td><img src="Images/dogfood2.png" alt="Dog food" height="300px"></td>
-  <td style="font-size: 25px;"> Dog Food</td><!-- Takes you to a new page that sells the product-->
-  <td style="font-size: 25px;"><a href="https://petworld.co.za/collections/dogs/products/hills-science-plan-canine-adult-small-mini-chicken-dry-dog-food" target="_blank">PetWorld</a></td>
-</tr>
-<tr>
-  <td><img src="Images/Cat Food.png" alt=" Cat food" height="300px"></td>
-  <td style="font-size: 25px;"> Cat Food</td>
-  <td style="font-size: 25px;"><a href="https://petworld.co.za/collections/cats/products/hills-science-plan-feline-adult-chicken-dry-cat-food" target="_blank">PetWorld</a></td>
-</tr>
-<tr>
-  <td><img src="Images/pets.jpg" alt=" Cat food" height="300px" width="550px"></td>
-  <td style="font-size: 25px;"> Pet Foods</td>
-  <td style="font-size: 25px;"><a href="https://petworld.co.za/?tw_source=google&tw_adid=&tw_campaign=22929691836&tw_kwdid=&gad_source=1&gad_campaignid=22939659265&gbraid=0AAAAApdGvp2o7hj2qv-cyK9CR_RawWfkh&gclid=CjwKCAjwtrXFBhBiEiwAEKen16YouypA9neA9E8NI3_6GmRw_p7rIiTjX8dgMcIuvmh1FYjmsMX1GRoCEekQAvD_BwE" target="_blank">PetWorld</a></td>
-</tr>
-</table>
-<br>
- <h1 align="center"> Pet Toys</h1>
-<table border="2" width="100%">
-<tr align = "center">
-<th><h2>Products</h2></th>
-<th><h2>Product Name</h2></th>
-<th><h2>Supplier</h2></th>
-</tr>
-<tr>
-    <td><img src="Images/dog toy.jpg" alt="Dog Toys" height="300px" width="500px"></td>
-  <td style="font-size: 25px;"> Dog Toys</td>
-  <td style="font-size: 25px;"><a href="https://www.takealot.com/all?_sb=1&_r=1&_si=114f0087fd41d0a942ade714bb7c64d0&qsearch=dog%20toys" target="_blank">Takealot</a></td>
-</tr>
-<tr>
-    <td><img src="Images/cat toy.jpg" alt="Cat Toys" height="300px" width="500px"></td>
-  <td style="font-size: 25px;"> Cat Toys</td>
-  <td style="font-size: 25px;"><a href="https://www.takealot.com/all?_sb=1&_r=1&_si=114f0087fd41d0a942ade714bb7c64d0&qsearch=cat%20toys" target="_blank">Takealot</a></td>
-</tr>
-</table>
-<br>
- <h1 align="center"> Pet Health</h1>
-<table border="2" width="100%">
-<tr align = "center">
-<th><h2>Products</h2></th>
-<th><h2>Product Name</h2></th>
-<th><h2>Supplier</h2></th>
-</tr>
-<tr>
-  <td><img src="Images/Grooming.jpg" alt="Pet Grooming" height="300px" width="500px"></td>
-  <td style="font-size: 25px;"> Pet Grooming</td>
-  <td style="font-size: 25px;"><a href="https://petworld.co.za/pages/grooming" target="_blank">PetWorld</a></td>
-</tr>
-</table>
-<br>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="AnimalInfo.html">Animal Info</a>
+    <a href="AnimalShelter.html">Animal Shelters</a>
+    <a href="AnimalProducts.html">Animal Products</a>
+    <a href="AnimalGallery.html">Gallery</a>
+    <a href="ContactUs.html">Contact Us</a>
+    <a href="DonateVolunteer.html">Donate & Volunteer</a>
+  </nav>
 
+  <main id="main" class="products-section">
 
+    <!-- Food -->
+    <section class="product-category">
+      <h2>Pet Food</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="Images/dogfood2.png" alt="Dog food bag">
+          <h3>Dog Food</h3>
+          <p>Balanced nutrition for adult dogs with chicken flavor.</p>
+          <p><strong>Supplier:</strong> <a href="https://petworld.co.za/collections/dogs/products/hills-science-plan-canine-adult-small-mini-chicken-dry-dog-food" target="_blank">PetWorld</a></p>
+        </div>
+        <div class="product-card">
+          <img src="Images/Cat Food.png" alt="Cat food bowl">
+          <h3>Cat Food</h3>
+          <p>High-protein food for healthy coats and energy.</p>
+          <p><strong>Supplier:</strong> <a href="https://petworld.co.za/collections/cats/products/hills-science-plan-feline-adult-chicken-dry-cat-food" target="_blank">PetWorld</a></p>
+        </div>
+        <div class="product-card">
+          <img src="Images/pets.jpg" alt="Assorted pet food">
+          <h3>Other Pet Foods</h3>
+          <p>Rabbit, guinea pig, and small pet food options.</p>
+          <p><strong>Supplier:</strong> <a href="https://petworld.co.za/" target="_blank">PetWorld</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toys -->
+    <section class="product-category">
+      <h2>Pet Toys</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="Images/dog toy.jpg" alt="Dog chew toy">
+          <h3>Dog Toys</h3>
+          <p>Durable chew and fetch toys to keep dogs active.</p>
+          <p><strong>Supplier:</strong> <a href="https://www.takealot.com/all?qsearch=dog%20toys" target="_blank">Takealot</a></p>
+        </div>
+        <div class="product-card">
+          <img src="Images/cat toy.jpg" alt="Cat toy with feather">
+          <h3>Cat Toys</h3>
+          <p>Interactive toys to stimulate cats and prevent boredom.</p>
+          <p><strong>Supplier:</strong> <a href="https://www.takealot.com/all?qsearch=cat%20toys" target="_blank">Takealot</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Health -->
+    <section class="product-category">
+      <h2>Pet Health</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="Images/Grooming.jpg" alt="Pet grooming kit">
+          <h3>Pet Grooming</h3>
+          <p>Essential grooming tools for coat health and hygiene.</p>
+          <p><strong>Supplier:</strong> <a href="https://petworld.co.za/pages/grooming" target="_blank">PetWorld</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-category">
+        <h3>General Product Questions</h3>
+        <details>
+          <summary>How do I choose the right food for my pet?</summary>
+          <p>Choose based on your pet's age, size, and health needs. Consult your vet for specific dietary advice.</p>
+        </details>
+        <details>
+          <summary>Are these products safe?</summary>
+          <p>Yes, all suppliers listed provide vet-approved and trusted products.</p>
+        </details>
+      </div>
+
+      <div class="faq-category">
+        <h3>Toys & Enrichment</h3>
+        <details>
+          <summary>Are chew toys safe for puppies?</summary>
+          <p>Yes, as long as they are specifically designed for puppies and not too hard for developing teeth.</p>
+        </details>
+        <details>
+          <summary>What toys are best for indoor cats?</summary>
+          <p>Interactive toys like feather wands, balls, and puzzle feeders are ideal for indoor cats.</p>
+        </details>
+      </div>
+
+      <div class="faq-category">
+        <h3>Health & Grooming</h3>
+        <details>
+          <summary>How often should I groom my pet?</summary>
+          <p>It depends on the breed. Long-haired pets may need daily brushing, while short-haired pets need less frequent grooming.</p>
+        </details>
+        <details>
+          <summary>Do I need professional grooming?</summary>
+          <p>Yes, some breeds benefit from regular professional grooming to maintain coat and skin health.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+<!-- create table -->
+
+<body>
+  <section class="product-category">
+      <h2>Calculate Your Budget</h2>
+  </section>  
+
+	<table id="calcu">
+		<tr>
+			<td colspan="3"><input type="text" id="result"></td>
+			<!-- clr() function will call clr to clear all value -->
+			<td><input type="button" value="c" onclick="clr()" /> </td>
+		</tr>
+		<tr>
+			<!-- create button and assign value to each button -->
+			<!-- dis("1") will call function dis to display value -->
+			<td><input type="button" value="1" onclick="dis('1')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="2" onclick="dis('2')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="3" onclick="dis('3')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="/" onclick="dis('/')"
+						onkeydown="myFunction(event)"> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="dis('4')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="5" onclick="dis('5')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="6" onclick="dis('6')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="*" onclick="dis('*')"
+						onkeydown="myFunction(event)"> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="dis('7')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="8" onclick="dis('8')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="9" onclick="dis('9')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="-" onclick="dis('-')"
+						onkeydown="myFunction(event)"> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="0" onclick="dis('0')"
+						onkeydown="myFunction(event)"> </td>
+			<td><input type="button" value="." onclick="dis('.')"
+						onkeydown="myFunction(event)"> </td>
+			<!-- solve function call function solve to evaluate value -->
+			<td><input type="button" value="=" onclick="solve()"> </td>
+
+			<td><input type="button" value="+" onclick="dis('+')"
+						onkeydown="myFunction(event)"> </td>
+		</tr>
+	</table>
+
+	<script>
+		// Function that display value
+		function dis(val) {
+			document.getElementById("result").value += val
+		}
+
+		function myFunction(event) {
+			if (event.key == '0' || event.key == '1'
+				|| event.key == '2' || event.key == '3'
+				|| event.key == '4' || event.key == '5'
+				|| event.key == '6' || event.key == '7'
+				|| event.key == '8' || event.key == '9'
+				|| event.key == '+' || event.key == '-'
+				|| event.key == '*' || event.key == '/')
+				document.getElementById("result").value += event.key;
+		}
+
+		let cal = document.getElementById("calcu");
+		cal.onkeyup = function (event) {
+			if (event.keyCode === 13) {
+				console.log("Enter");
+				let x = document.getElementById("result").value
+				console.log(x);
+				solve();
+			}
+		}
+
+		// Function that evaluates the digit and return result
+		function solve() {
+			let x = document.getElementById("result").value
+			let y = math.evaluate(x)
+			document.getElementById("result").value = y
+		}
+
+		// Function that clear the display
+		function clr() {
+			document.getElementById("result").value = ""
+		}
+	</script>
 </body>
-<a href='#top' style="font-size: 25px;">Back to top</a>
-  
+</html>
+
+  <footer>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
 </html>
