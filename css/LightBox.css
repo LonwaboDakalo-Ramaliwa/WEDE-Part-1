@@ -4,7 +4,7 @@ body, html {
 
 body {
     margin: 0;
-    font-family: 'Century Gothic';
+    font-family: '"Roboto", Arial, sans-serif';
 }
 
 h1 {
@@ -84,7 +84,7 @@ h1 {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-color: #bbb;
+    background-color: #fff;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -97,7 +97,7 @@ h1 {
 #image4:checked ~ .slider-navigation label:nth-child(4),
 #image5:checked ~ .slider-navigation label:nth-child(5),
 #image6:checked ~ .slider-navigation label:nth-child(6) {
-    background-color: #555;
+    background-color: #fff;
 }
 
 
@@ -131,7 +131,7 @@ main img {
   width: auto;
   padding: 16px;
   margin-top: -22px; 
-  color: #f1f1f1;
+  color: #fff;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
@@ -193,7 +193,7 @@ main img {
 
 
 #caption {
-    color: #ccc;
+    color: #fff;
     font-size: 1.2rem;
     margin-top: 15px;
     text-align: center;
@@ -203,7 +203,7 @@ main img {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -213,6 +213,6 @@ main img {
 
 .close-btn:hover,
 .close-btn:focus {
-    color: #bbb;
+    color: #fff;
     text-decoration: none;
 }
