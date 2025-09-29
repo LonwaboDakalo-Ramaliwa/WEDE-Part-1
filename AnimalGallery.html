@@ -28,7 +28,7 @@
   <main id="main">
     <!-- Dog Gallery -->
     <h2>Dog Gallery</h2>
-    <div class="gallery" id="dog-gallery">
+    <div class="gallery" id="dog-gallery"> <!--Caption will appear under the image-->
       <div class="picture"><img src="Images/dog1.png" alt="Dog 1" data-src="Images/dog1.png" data-caption="Dog 1"></div>
       <div class="picture"><img src="Images/dog2.png" alt="Dog 2" data-src="Images/dog2.png" data-caption="Dog 2"></div>
       <div class="picture"><img src="Images/dog3.png" alt="Dog 3" data-src="Images/dog3.png" data-caption="Dog 3"></div>
@@ -58,8 +58,8 @@
   <!-- Dog LightBox -->
   <div id="dog-lightbox" class="lightbox">
     <span class="close-btn">&times;</span>
-    <a class="prev-arrow">&#10094;</a>
-    <a class="next-arrow">&#10095;</a>
+    <a class="prev-arrow">&#10094;</a><!--Places right arrow to go back to previous images-->
+    <a class="next-arrow">&#10095;</a><!--Places right arrow to go back to next images-->
     <div class="lightbox-content-container">
       <img class="lightbox-image" id="dog-lightbox-img">
       <p id="dog-caption"></p>
@@ -92,6 +92,6 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="lightbox.js"></script>
+  <script src="lightbox.js"></script><!--fetches the javascript in a different file-->
 </body>
 </html>

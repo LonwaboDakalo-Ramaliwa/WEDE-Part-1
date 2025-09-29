@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
  
-  setupLightbox("dog-gallery", "dog-lightbox", "dog-lightbox-img", "dog-caption");
+  setupLightbox("dog-gallery", "dog-lightbox", "dog-lightbox-img", "dog-caption");//This allows the website to have 3 different lightboxes instead of one combined
   setupLightbox("cat-gallery", "cat-lightbox", "cat-lightbox-img", "cat-caption");
   setupLightbox("pet-gallery", "pet-lightbox", "pet-lightbox-img", "pet-caption");
 
