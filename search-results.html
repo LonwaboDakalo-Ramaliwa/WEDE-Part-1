@@ -4,124 +4,171 @@
   <meta charset="utf-8" />
   <title>Search Results</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="search.css">
-  <link rel="stylesheet" href="preview.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="preview.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .result { padding: 10px 0; border-bottom: 1px solid #eee; }
-    .result a { text-decoration:none; color:#007BFF; font-size:18px; }
-    .result a:hover { text-decoration: underline; }
-      body {
+    body {
       font-family: Arial, sans-serif;
       padding: 40px;
       background-color: white;
     }
 
-    .about-container {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-    }
-
-    .about-text {
-      flex: 1;
-      padding: 20px;
-      font-size: 20px;
-      border-left: 2px solid black;
-      border-right: 2px solid black;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .about-image img {
-      max-width: 400px;
+    header img {
+      width: 120px;
       height: auto;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
+    header h1 {
+      display: inline-block;
+      margin-left: 15px;
+      vertical-align: middle;
+      color: #6a1b9a;
+    }
 
-  .icon-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
+    .banner {
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #f0f0f0;
+      color: #333;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
 
+    /* Navigation bar */
+    nav {
+      position: relative;
+      background-color: #6a1b9a; /* purple */
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+      margin-top: 20px;
+    }
 
-.icon-btn {
-  background-color: #c9c9c9;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.icon-btn img {
-  width: 75%;
-  height: 75px;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.icon-btn:hover {
-  background-color: #e0e0e0;
-}
+    /* Search icon button */
+    .icon-btn {
+      background: none;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+    }
 
-.hidden {
-  display: none;
-}
+    .icon-btn img {
+      width: 28px;
+      height: 28px;
+      background: transparent;          /* removes grey background */
+      filter: brightness(0) invert(1);  /* makes icon white */
+      vertical-align: middle;
+    }
 
+    .icon-btn:hover img {
+      opacity: 0.8;
+    }
+
+    /* Search panel styling */
+    .search-panel {
+      position: absolute;
+      top: 55px;
+      right: 10px;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .search-container input[type="search"] {
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .search-container button {
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Search results styling */
+    #results {
+      margin-top: 30px;
+    }
+
+    .result {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .result a {
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 18px;
+    }
+
+    .result a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
- <header>
-    <img src="Images/logo update.png" alt="No One Left Behind Logo"><!--Alt will appear if image is unable to show-->
-    <h1 align="left">Search Results</h1>
+  <header>
+    <img src="Images/logo update.png" alt="No One Left Behind Logo">
+    <h1>Search Results</h1>
   </header>
 
-  <div class="banner">Do your part and have a heart.</div> <!--Replaces marquee-->
+  <div class="banner">Do your part and have a heart.</div>
 
   <nav>
+    <a href="home.html" target="_blank">Home</a>
     <a href="AnimalInfo.html" target="_blank">Animal Info</a>
     <a href="AnimalShelter.html" target="_blank">Animal Shelters</a>
     <a href="AnimalProducts.html" target="_blank">Animal Products</a>
     <a href="AnimalGallery.html" target="_blank">Gallery</a>
     <a href="ContactUs.html" target="_blank">Contact Us</a>
-    <a href="Donate&Volunteer.html" target="_blank"> Donate & Volunteer</a>
+    <a href="Donate&Volunteer.html" target="_blank">Donate & Volunteer</a>
 
     <button class="icon-btn" id="searchToggle">
-    <img src="./images/search.png" alt="Search" />
-  </button>
- 
- 
+      <img src="./Images/search.png" alt="Search" />
+    </button>
 
-  <div id="searchPanel" class="search-panel hidden">
-  <form action="search-results.html" method="get" class="search-container" onsubmit="">
-    <label for="site-search" style="display:none;">Search the site:</label>
-    <input type="search" id="site-search" name="q" placeholder="Enter your search term..." autocomplete="off" />
-    <button type="submit">Search</button>
-  </form>
-
-  
-  <div id="searchPreview" class="search-preview"></div>
-  </div>
+    <div id="searchPanel" class="search-panel hidden">
+      <form action="search-results.html" method="get" class="search-container" onsubmit="">
+        <label for="site-search" style="display:none;">Search the site:</label>
+        <input type="search" id="site-search" name="q" placeholder="Enter your search term..." autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+      <div id="searchPreview" class="search-preview"></div>
+    </div>
   </nav>
 
-</div></td></tr>
-  </table>
-</br>
-
-
-
   <div id="results"></div>
- <br/>
-<br/> 
 
-
-  <script src="data.js"></script>
+  
+</body>
+<script src="data.js"></script>
   <script src="search.js"></script>
+
   <script>
-    const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
     const query = params.get('q')?.trim().toLowerCase() || '';
     const resultsContainer = document.getElementById('results');
 
@@ -145,5 +192,4 @@
       }
     }
   </script>
-</body>
 </html>
