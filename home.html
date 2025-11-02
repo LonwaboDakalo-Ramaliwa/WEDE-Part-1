@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="./css/styles.css"><!--fetches the style css in the CSS folder to apply to the page-->
-<head>
+  <link rel="stylesheet" href="./css/search.css">
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>No One Left Behind</title>
@@ -15,14 +16,31 @@
 
   <div class="banner">Do your part and have a heart.</div> <!--Replaces marquee-->
 
-  <nav>
-    <a href="AnimalInfo.html" target="_blank">Animal Info</a>
-    <a href="AnimalShelter.html" target="_blank">Animal Shelters</a>
-    <a href="AnimalProducts.html" target="_blank">Animal Products</a>
-    <a href="AnimalGallery.html" target="_blank">Gallery</a>
-    <a href="ContactUs.html" target="_blank">Contact Us</a>
-    <a href="Donate&Volunteer.html" target="_blank"> Donate & Volunteer</a>
-  </nav>
+<nav>
+  <a href="AnimalInfo.html" target="_blank">Animal Info</a>
+  <a href="AnimalShelter.html" target="_blank">Animal Shelters</a>
+  <a href="AnimalProducts.html" target="_blank">Animal Products</a>
+  <a href="AnimalGallery.html" target="_blank">Gallery</a>
+  <a href="ContactUs.html" target="_blank">Contact Us</a>
+  <a href="Donate&Volunteer.html" target="_blank">Donate & Volunteer</a>
+
+  <!-- Search button -->
+  <button class="icon-btn" id="searchToggle">
+    <img src="./images/search.png" alt="Search" />
+  </button>
+
+  <!-- Search panel -->
+  <div id="searchPanel" class="search-panel hidden">
+    <form action="search-results.html" method="get" class="search-container" onsubmit="return handleSearch(event)">
+      <label for="site-search" style="display:none;">Search the site:</label>
+      <input type="search" id="site-search" name="q" placeholder="Enter your search term..." autocomplete="off" />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="searchPreview" class="search-preview"></div>
+  </div>
+</nav>
+
 
   <main id="main">
     <iframe width="100%" height="480" src="https://www.youtube.com/embed/uYJQIKAVBw8" title="Dogs & Puppies in 4K" frameborder="0" allowfullscreen></iframe>
@@ -42,4 +60,5 @@
     <a href="#top">Back to top</a><!--This will take you to the top of the page-->
   </footer>
 </body>
+<script src="search.js"></script>
 </html>
